@@ -1,0 +1,306 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+@font-face {
+    font-family: 'Arcadepix';
+    src: url('../fonts/Arcadepix.woff2') format('woff2'),
+        url('../fonts/Arcadepix.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Anson';
+    src: url('../fonts/anson-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --Blanco: white;
+    --Negro: black;
+    --Rojo: #c01010;
+    --Letra: 'Roboto';
+    --LogoLetra: 'Arcadepix';
+    --LetraTitulos: 'Anson';
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--Letra);
+    list-style-type: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,body{
+    background-color:var(--Fondo);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    flex:1;
+}
+
+header{
+    background-color: var(--Blanco);
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+
+main{
+    margin-top: 62px;
+    background-image: url("../img/leaves_portrait.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+}
+
+.page-Container{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+#logoBanner{
+    padding: 16px 0;
+    width: 100%;
+}
+
+#logoBanner a{
+    display: flex;
+    justify-content: center;
+    color: var(--Negro);
+    font-family: var(--LogoLetra);
+    font-size: 22px;
+    transform: scale(1, 1.8);
+}
+
+#list_Heroes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 15px auto 20px auto;
+    gap: 10px;
+}
+
+.hero_Page{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero_Article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    text-align: center;
+}
+
+.hero_Article p{
+    font-family: 'Anson';
+    font-weight: bold;
+    height: 40px;
+    color: var(--Negro);
+    margin: 5px auto;
+}
+
+.hero_Title {
+    font-size: 33px;
+    font-family: 'Anson';
+    font-weight: bold;
+}
+
+.hero_Image_List{
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    border-radius: 0.5rem;
+}
+
+.hero_Image {
+    max-width:100%;
+    height:auto;
+    margin: 20px 0;
+    border-radius: 0.5rem;
+}
+
+.hero_Details{
+    margin: 0 auto;
+    width: 90%;
+    background-color: var(--Blanco);
+    box-shadow: 0 0 10px rgba(0,0,0,0.15) inset;
+    border-radius: 1rem;
+    padding: 15px;
+}
+
+.hero_Details p{
+    font-family: 'Anson';
+}
+
+.topButton a{
+    margin-bottom: 20px;
+}
+
+.topButton i{
+    color: var(--Negro);
+}
+
+/* Footer Section */
+
+.main-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--Negro);
+    padding: 15px;
+}
+
+
+#socialIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#socialIcons a{
+    margin: 0.2rem auto;
+    font-size: 35px;
+    color: var(--Blanco);
+    width: fit-content;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#socialIcons a:hover{
+    color: var(--Rojo);
+}
+
+#footerEnd p:nth-child(1){
+    padding-top: 10px;
+}
+
+#footerEnd p{
+    color: var(--Blanco);
+    font-family: var(--LogoLetra);
+    transform: scale(0.5, 0.8);
+}
+
+/* Media Queries */
+
+/* Tablet */
+
+@media screen and (min-width: 570px)  {
+    /*Home*/
+
+    main{
+        background-image: url("../img/leaves_landscape.png");
+    }
+
+    #list_Heroes{
+        margin: 30px auto 20px auto;
+    }
+
+    .hero_Article{
+        width: 30%;
+    }
+
+    .hero_Article p{
+        font-size: 25px;
+    }
+
+    .hero_Image_List{
+        height: 200px;
+    }
+
+    .topButton{
+        display: none;
+    }
+
+    /* Hero Page */
+
+    .hero_Title{
+        font-size: 37px;
+    }
+
+    .hero_Details{
+        font-size: 27px;
+        width: 70%;
+    }
+
+    /* Footer */
+    #socialIcons a{
+        font-size: 40px;
+    }
+
+    #footerEnd p{
+        transform: scale(0.8, 1);
+    }
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 992px)  {
+    /*Home*/
+
+    main{
+        background-image: url("../img/leaves_landscape.png");
+    }
+
+    #list_Heroes{
+        margin: 30px auto 20px auto;
+    }
+
+    .hero_Article{
+        width: 18%;
+    }
+
+    .hero_Article p{
+        font-size: 25px;
+    }
+
+    .hero_Image_List{
+        height: 200px;
+    }
+
+    .topButton{
+        display: none;
+    }
+
+    /* Hero Page */
+
+    .hero_Title{
+        font-size: 37px;
+    }
+
+    .hero_Details{
+        font-size: 27px;
+        width: 70%;
+    }
+
+    /* Footer */
+    #socialIcons a{
+        font-size: 40px;
+    }
+
+    #footerEnd p{
+        transform: scale(0.8, 1);
+    }
+}
