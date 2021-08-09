@@ -128,7 +128,7 @@ main{
 
 .hero_Image_List{
     width: 80%;
-    height: 100px;
+    height: 130px;
     margin: auto;
     border-radius: 0.5rem;
 }
@@ -226,7 +226,7 @@ main{
     }
 
     .hero_Image_List{
-        height: 200px;
+        height: 250px;
     }
 
     .topButton{
@@ -277,7 +277,7 @@ main{
     }
 
     .hero_Image_List{
-        height: 200px;
+        height: 250px;
     }
 
     .topButton{
